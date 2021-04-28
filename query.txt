@@ -89,7 +89,18 @@ RISULTATO QUERY:
 
 4) Seleziona tutti gli ospiti il cui nome inizia con la D
 
+QUERY:
 
+SELECT `id`, `name`, `lastname` 
+FROM `ospiti` 
+WHERE `name` LIKE 'D%'
+
+RISULTATO QUERY:
+
+|38|Delilah|Renner
+|45|Dion|Leannon
+|49|Deron|Hand
+|53|Dandre|Kautzer
 
 5) Calcola il totale degli ordini accepted
 6) Qual è il prezzo massimo pagato?
