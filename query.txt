@@ -143,3 +143,12 @@ RISULTATO QUERY:
 
 
 8) Quanti posti letto ha l’hotel in totale?
+
+QUERY:
+
+SELECT SUM(`beds`) 
+FROM `stanze`; 
+
+RISULTATO QUERY:
+
+33
