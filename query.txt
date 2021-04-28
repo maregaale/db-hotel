@@ -1,0 +1,74 @@
+1) Seleziona tutti gli ospiti che sono stati identificati con la carta di identità
+
+===Database hotel
+
+== Table structure for table ospiti
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(10)|No|
+|name|varchar(255)|No|
+|lastname|varchar(255)|No|
+|date_of_birth|datetime|No|
+|document_type|varchar(1024)|No|
+|document_number|varchar(1024)|No|
+|created_at|timestamp|Yes|NULL
+|updated_at|timestamp|Yes|NULL
+== Dumping data for table ospiti
+
+|31|Elizabeth|Romaguera|CI
+|32|Madie|Sanford|CI
+|34|Lysanne|Buckridge|CI
+|35|Jessie|Kozey|CI
+|36|Shemar|Keeling|CI
+|37|Edwardo|Pacocha|CI
+|39|Jacquelyn|Ankunding|CI
+|40|Willie|Borer|CI
+|42|Kamron|Murphy|CI
+|44|Charley|Abernathy|CI
+|52|Tyrel|Murphy|CI
+|56|Gillian|Reichel|CI
+|57|Briana|Cartwright|CI
+|59|Lamar|Koch|CI
+|60|Lafayette|Brakus|CI
+
+2) Seleziona tutti gli ospiti che sono nati dopo il 1988
+
+===Database hotel
+
+== Table structure for table ospiti
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(10)|No|
+|name|varchar(255)|No|
+|lastname|varchar(255)|No|
+|date_of_birth|datetime|No|
+|document_type|varchar(1024)|No|
+|document_number|varchar(1024)|No|
+|created_at|timestamp|Yes|NULL
+|updated_at|timestamp|Yes|NULL
+== Dumping data for table ospiti
+
+|53|Dandre|Kautzer|1988-05-22 08:37:49
+|39|Jacquelyn|Ankunding|1992-11-19 06:15:10
+|45|Dion|Leannon|1993-09-22 15:41:21
+|43|Helene|Hansen|2000-02-24 12:21:08
+|56|Gillian|Reichel|2000-09-01 03:03:09
+|55|Nikita|Donnelly|2001-12-26 02:54:30
+|42|Kamron|Murphy|2002-12-17 15:29:31
+|41|Tristian|Koss|2003-01-27 03:01:13
+|31|Elizabeth|Romaguera|2005-03-12 10:37:05
+|50|Laurence|Green|2008-12-25 13:42:07
+|48|Emilie|Grant|2010-12-18 14:22:44
+
+3) Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzione della query)
+
+
+4) Seleziona tutti gli ospiti il cui nome inizia con la D
+5) Calcola il totale degli ordini accepted
+6) Qual è il prezzo massimo pagato?
+7) Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+8) Quanti posti letto ha l’hotel in totale?
