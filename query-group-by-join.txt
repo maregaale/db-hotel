@@ -234,4 +234,21 @@ RISULTATO QUERY:
 
 
 5) Prendi i dati di fatturazione per la prenotazione con id=7
+
+QUERY:
+
+SELECT *
+FROM `pagamenti` 
+INNER JOIN `prenotazioni`
+ON `pagamenti`.`prenotazione_id` = `prenotazioni`.`id`
+AND `prenotazioni`.`id` = 7
+INNER JOIN `paganti`
+ON `pagamenti`.`pagante_id` = `paganti`.`id`;
+
+RISULTATO QUERY:
+
+|7|pending|993.00|7|6|2018-05-28 13:53:45|2018-05-28 13:53:45|7|8|2|2018-04-22 02:36:11|2018-04-22 02:36:11|6|31|Elizabeth|Romaguera|3125 Kenya Path Apt. 401
+Thoraborough, TN 06428|2018-05-28 13:47:31|2018-05-28 13:47:31
+
+
 6) Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate) 
