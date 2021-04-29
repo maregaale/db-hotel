@@ -217,5 +217,21 @@ RISULTATO QUERY:
 
 
 4) Fai la somma di tutti i prezzi delle prenotazioni per le stanze del primo piano
+
+QUERY:
+
+SELECT SUM(`pagamenti`.`price`) AS `prezzi`
+FROM `prenotazioni` 
+INNER JOIN `stanze`
+ON `prenotazioni`.`stanza_id` = `stanze`.`id`
+AND `stanze`.`floor` = 1
+INNER JOIN `pagamenti`
+ON `pagamenti`.`prenotazione_id` = `prenotazioni`.`id`;
+
+RISULTATO QUERY:
+
+4509
+
+
 5) Prendi i dati di fatturazione per la prenotazione con id=7
 6) Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate) 
