@@ -140,7 +140,53 @@ RISULTATO QUERY:
 
 
 2) Stampare tutti gli ospiti per ogni prenotazione
+
+QUERY:
+
+SELECT `prenotazioni`.`id` AS `id_prenotazione`, `ospiti`.`name` AS `nome_ospite`, `ospiti`.`lastname` AS `nome_ospite`
+FROM `prenotazioni_has_ospiti`
+INNER JOIN `prenotazioni` 
+ON `prenotazioni_has_ospiti`.`prenotazione_id` = `prenotazioni`.`id`
+INNER JOIN `ospiti`
+ON `prenotazioni_has_ospiti`.`ospite_id` = `ospiti`.`id`;
+
+RISULTATO QUERY:
+
+|1|Madie|Sanford
+|2|Gillian|Reichel
+|3|Shirley|Brakus
+|4|Zelda|Johns
+|5|Tristian|Koss
+|6|Zelda|Johns
+|7|Willie|Borer
+|8|Helene|Hansen
+|9|Shirley|Brakus
+|10|Tristian|Koss
+|11|Edwardo|Pacocha
+|12|Orion|Hilpert
+|13|Zelda|Johns
+|14|Tristian|Koss
+|15|Adriana|Abernathy
+|16|Laurence|Green
+|17|Delilah|Renner
+|18|Arlo|Keeling
+|19|Elizabeth|Romaguera
+|20|Shemar|Keeling
+|21|Nikita|Donnelly
+|22|Jessie|Kozey
+|23|Hadley|Collins
+|24|Deron|Hand
+|25|Adriana|Abernathy
+|26|Nikita|Donnelly
+|27|Hadley|Collins
+|28|Madie|Sanford
+|29|Arlo|Keeling
+|30|Gillian|Reichel
+
+
 3) Stampare Nome, Cognome, Prezzo e Pagante per tutte le prenotazioni fatte a Maggio 2018
+
+
 4) Fai la somma di tutti i prezzi delle prenotazioni per le stanze del primo piano
 5) Prendi i dati di fatturazione per la prenotazione con id=7
 6) Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate) 
