@@ -252,3 +252,15 @@ Thoraborough, TN 06428|2018-05-28 13:47:31|2018-05-28 13:47:31
 
 
 6) Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate) 
+
+QUERY:
+
+SELECT `stanze`.`room_number` AS `num_stanze_non_prenotate`
+FROM `prenotazioni` 
+RIGHT JOIN `stanze`
+ON `prenotazioni`.`stanza_id` = `stanze`.`id`
+WHERE `prenotazioni`.`stanza_id` IS NULL;
+
+RISULTATO QUERY:
+
+101
