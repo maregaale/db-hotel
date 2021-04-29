@@ -123,6 +123,22 @@ RISULTATO QUERY:
 
 JOIN
 1) Come si chiamano gli ospiti che hanno fatto più di due prenotazioni?
+
+QUERY:
+
+SELECT `ospiti`.`name`, `ospiti`.`lastname`, COUNT(`prenotazioni_has_ospiti`.`ospite_id`) AS `prenotazioni_ospite`
+FROM `prenotazioni_has_ospiti`
+INNER JOIN `ospiti` 
+ON `ospiti`.`id` = `prenotazioni_has_ospiti`.`ospite_id`
+GROUP BY `prenotazioni_has_ospiti`.`ospite_id`
+HAVING `prenotazioni_ospite` > 2;
+
+RISULTATO QUERY:
+
+|Tristian|Koss|3
+|Zelda|Johns|3
+
+
 2) Stampare tutti gli ospiti per ogni prenotazione
 3) Stampare Nome, Cognome, Prezzo e Pagante per tutte le prenotazioni fatte a Maggio 2018
 4) Fai la somma di tutti i prezzi delle prenotazioni per le stanze del primo piano
