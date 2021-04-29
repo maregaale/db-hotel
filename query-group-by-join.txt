@@ -186,6 +186,35 @@ RISULTATO QUERY:
 
 3) Stampare Nome, Cognome, Prezzo e Pagante per tutte le prenotazioni fatte a Maggio 2018
 
+QUERY:
+
+SELECT `ospiti`.`name` AS `nome_ospite`, `ospiti`.`lastname` AS `cognome_ospite`, `pagamenti`.`price` AS `prezzo`, `paganti`.`name` AS `nome_pagante`, `paganti`.`lastname` AS `cognome_pagante`
+FROM `pagamenti`
+INNER JOIN `prenotazioni`
+ON `pagamenti`.`prenotazione_id` = `prenotazioni`.`id`
+AND MONTH(`prenotazioni`.`created_at`) = 5
+AND YEAR(`prenotazioni`.`created_at`) = 2018
+
+INNER JOIN `paganti`
+ON `pagamenti`.`pagante_id` = `paganti`.`id`
+
+INNER JOIN `ospiti`
+ON `paganti`.`ospite_id` = `ospiti`.`id`
+
+RISULTATO QUERY:
+
+|Elizabeth|Romaguera|671.00|Elizabeth|Romaguera
+|Lysanne|Buckridge|332.00|Lysanne|Buckridge
+|Deron|Hand|67.00|Deron|Hand
+|Kamron|Murphy|562.00|Kamron|Murphy
+|Elizabeth|Romaguera|614.00|Elizabeth|Romaguera
+|Lysanne|Buckridge|152.00|Lysanne|Buckridge
+|Delilah|Renner|822.00|Delilah|Renner
+|Willie|Borer|416.00|Willie|Borer
+|Gillian|Reichel|609.00|Gillian|Reichel
+|Deron|Hand|508.00|Deron|Hand
+|Orion|Hilpert|82.00|Orion|Hilpert
+
 
 4) Fai la somma di tutti i prezzi delle prenotazioni per le stanze del primo piano
 5) Prendi i dati di fatturazione per la prenotazione con id=7
